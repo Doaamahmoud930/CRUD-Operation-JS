@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRUD Operations</title>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+</html>
+<body>
+    <div class="w-75 mx-auto">
+        <div class="mt-3 mb-3">
+            <label for="inputName" class="form-label">Product Name</label>
+            <input class="form-control" id="inputName" type="text">
+        <div id="alertName" class="alert d-none mt-1" role="alert">
+            <strong>Name can't be empty and should be Capitalize ..</strong>
+          </div>
+       </div>
+        <div class="mb-3">
+            <label for="inputPrice" class="form-label">Product Price</label>
+            <input class="form-control" id="inputPrice" type="number">
+            <div id="alertPrice" class="alert d-none mt-1" role="alert">
+                <strong>Price must begin from 1000 ..</strong>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inputCategory" class="form-label">Product Category</label>
+            <input class="form-control" id="inputCategory" type="text">
+            <div id="alertCategory" class="alert d-none mt-1" role="alert">
+                <strong>Category must be a tv , mobile or laptop..</strong>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="inputDesc" class="form-label">Product Description</label>
+            <input class="form-control" id="inputDesc" type="text">
+            <div id="alertDesc" class="alert d-none mt-1" role="alert">
+                <strong>Description must have 30 characters or more...</strong>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-primary " id="inputAddPro" onclick="addProduct()" >Add Product</button>
+        <button class="btn btn-outline-warning " id="inputUpdatePro" onclick="updateProduct()">Update Product</button>
+    </div>
+
+
+    <div class="mb-3 mt-5 w-75 mx-auto">
+        <input onkeyup="searchProduct(this.value)" class="form-control me-2" type="search" placeholder="Search For Product" aria-label="Search">
+    </div>
+    <table class="mb-3 w-75 mx-auto table text-center py-3 border border-2">
+        <thead>
+            <th>Index</th>
+            <th>Name</th>
+            <th>price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
